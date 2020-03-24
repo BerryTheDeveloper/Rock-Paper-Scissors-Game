@@ -11,15 +11,35 @@
 
 <body>
 
-  <div class="container">
+  <header>
+    <div class="title">
+      <h1><span>The best</span> Rock, Paper, Scissors <span>Online Game</span></h1>
+    </div>
+  </header>
+  <main>
+    <section class="score"></section>
+    <section class="game">
+      <div class="rock" id="rock">
+        <img src="./assets/img/Rock.png" alt="">
+      </div>
+      <div class="papper" id="papper">
+        <img src="./assets/img/Rock.png" alt="">
+      </div>
+      <div class="scissors" id="scissors">
+        <img src="./assets/img/Rock.png" alt="">
+      </div>
+    </section>
+  </main>
+  <div class="container display-none">
     <div class="form">
       <p>Welcome to <span>Rock, Papper, Scissors </span>game!</p>
       <form>
-        <label for="player1">Enter playerOne name</label>
-        <input type="text" name="player1">
-        <label for="player2">Enter playerTwo name</label>
-        <input type="text" name="player2">
-        <a href="#" class="btn submit">Let's start the game!</a>
+        <label for="player1">Enter your name</label>
+        <input type="text" name="player1" id="player1">
+        <!-- <label for="player2">Enter playerTwo name</label>
+        <input type="text" name="player2"> -->
+        <!-- <a href="#" class="btn submit">Let's start the game!</a> -->
+        <button type="submit" class="btn submit">Let's start the game!</button>
       </form>
     </div>
   </div>
