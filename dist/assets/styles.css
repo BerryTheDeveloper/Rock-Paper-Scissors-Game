@@ -81,6 +81,7 @@ header {
   border-radius: 2.25rem;
   margin: 1rem auto;
   font-size: 35px;
+  background-color: white;
 }
 
 .header-content .btn:hover {
@@ -126,9 +127,13 @@ header {
   margin: 0.2rem auto 5rem auto;
 }
 
-.mid-icon img:nth-child(2) {
+.mid-icon img {
   width: 100px;
-  margin: 0 2rem;
+}
+
+.mid-icon img:nth-child(2) {
+  /* width: 100px; */
+  margin: 0 2.5rem 0 2rem;
 }
 
 .middle-content .list {
@@ -174,6 +179,7 @@ header {
 }
 
 .tooltip-content {
+  /* display: none; */
   display: block;
   width: 60%;
   margin: auto;
@@ -251,9 +257,9 @@ header {
 
 .bottom-footer p.made-by {
   width: 100%;
-  font-size: 25px;
+  font-size: 20px;
   padding: 0;
-  margin: auto 0 auto 0;
+  margin: auto 0;
   display: inline-block;
 }
 
