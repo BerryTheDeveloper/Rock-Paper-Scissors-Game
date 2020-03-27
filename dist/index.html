@@ -4,32 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles.css">
-
   <title>UI Library</title>
 </head>
 
 <body>
 
   <header>
-    <div class="title">
-      <h1><span>The best</span> Rock, Paper, Scissors <span>Online Game</span></h1>
+    <div class="header-title" id="Home">
+      <h1>The Best <span>Rock, Papper, Scissors</span> online game</h1>
+    </div>
+    <div class="header-content">
+      <a href="#Home" class="btn btn-lg">Start a game</a>
+      <a href="#Rules" class="btn btn-lg">Rules</a>
+      <a href="#About" class="btn btn-lg">About</a>
+      <h2>Enjoy!</h2>
     </div>
   </header>
   <main>
-    <section class="score"></section>
-    <section class="game">
-      <div class="rock" id="rock">
-        <img src="./assets/img/Rock.png" alt="">
+    <section class="main-content">
+      <div class="middle-content" id="Rules">
+        <h1>Rules are important</h1>
+        <div class="mid-icon">
+          <img src="./assets/img/Rock.png" alt="Rock">
+          <img src="./assets/img/Papper.png" alt="Papper">
+          <img src="./assets/img/Scissors.png" alt="Scissors">
+        </div>
+        <div class="list">
+          <p>There are three important rules you should know:</p>
+          <ul class="list-content">
+            <li>
+              <img src="./assets/img/arrow.png" alt="">
+              <span>Rock beats Scissors</span>
+              <img src="./assets/img/win.png" alt="">
+            </li>
+            <li>
+              <img src="./assets/img/arrow.png" alt="">
+              <span>Scissors cut Papper</span>
+              <img src="./assets/img/win.png" alt="">
+            </li>
+            <li>
+              <img src="./assets/img/arrow.png" alt="">
+              <span>Papper wrap Rock</span>
+              <img src="./assets/img/win.png" alt="">
+            </li>
+          </ul>
+        </div>
+        <div class="tooltip">
+          <p>Intresting fact</p>
+          <div class="tooltip-content">
+            <p>In some variations of the game, the winner of each round "uses" the weapon on the opponent's weapon, to
+              demonstrate that they have won.</p>
+          </div>
+        </div>
+        <div class="mid-footer">
+          <h3>May the best man win!<span>Good luck!</span></h3>
+        </div>
       </div>
-      <div class="papper" id="papper">
-        <img src="./assets/img/Rock.png" alt="">
+
+      <div class="bottom-content" id="About">
+        <h1>About <span>Rock, Papper, Scissors</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut pellentesque risus. Nulla suscipit ipsum
+          leo, sit amet posuere odio pellentesque id. Vivamus aliquam magna quis elit luctus dignissim. Aliquam neque
+          ipsum, euismod sed pellentesque nec, suscipit id leo. Nullam sit amet tempus lorem. Aliquam nec diam ac urna
+          pulvinar varius a sed arcu. Nunc quam augue, volutpat non pharetra ut, efficitur eget nisl. Proin tincidunt
+          mollis imperdiet</p>
+        <a href="#Home"><img src="./assets/img/top.png " alt=""></a>
+
+        <div class="bottom-footer">
+          <p class="made-by">Made by SimplyMan</p>
+          <img src="./assets/img/github.png" alt="">
+        </div>
       </div>
-      <div class="scissors" id="scissors">
-        <img src="./assets/img/Rock.png" alt="">
-      </div>
+
     </section>
   </main>
+
   <div class="container display-none">
     <div class="form">
       <p>Welcome to <span>Rock, Papper, Scissors </span>game!</p>
@@ -39,7 +90,7 @@
         <!-- <label for="player2">Enter playerTwo name</label>
         <input type="text" name="player2"> -->
         <!-- <a href="#" class="btn submit">Let's start the game!</a> -->
-        <button type="submit" class="btn submit">Let's start the game!</button>
+        <button type="submit" class="btn  btn-submit">Let's start the game!</button>
       </form>
     </div>
   </div>

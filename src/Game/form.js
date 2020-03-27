@@ -5,7 +5,7 @@ class Form {
     this.container = container;
     this.form = this.container.querySelector("form");
     this.playerName = this.form.querySelector("input");
-    this.button = this.form.querySelector(".submit");
+    this.button = this.form.querySelector(".btn-submit");
   }
   init() {
     this.form.addEventListener("submit", event => {
