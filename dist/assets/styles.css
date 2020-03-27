@@ -11,6 +11,23 @@ body {
   width: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fffff8;
+  box-shadow: inset 0 0 4px rgba(112, 112, 112, 0.5);
+  /* opacity: 0.8; */
+}
+
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  border-radius: 4px;
+  /* box-shadow: inset 0 0 4px rgba(112, 112, 112, 0.5); */
+  background-color: rgba(112, 112, 112, 0.5);
+}
+
 h1,
 h2,
 h3 {
@@ -64,6 +81,12 @@ header {
   border-radius: 2.25rem;
   margin: 1rem auto;
   font-size: 35px;
+}
+
+.header-content .btn:hover {
+  border-color: rgba(112, 112, 112, 0.8);
+  background-color: rgba(112, 112, 112, 0.1);
+  box-shadow: 5px 5px 20px #707070, -5px -5px 20px #707070;
 }
 
 .header-content h2 {
@@ -210,7 +233,7 @@ header {
 .bottom-content a[href="#Home"] img {
   width: 64px;
   transform: rotate(90deg);
-  /* animation: move 0.5s linear infinity; */
+  animation: bounceT 0.5s linear infinite reverse;
 }
 /* main content => bottom content =>*/
 /* bottom-footer */
@@ -240,11 +263,22 @@ header {
   height: 50px;
 }
 
-/* @keyframes move {
+@keyframes bounceT {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 0.5rem;
+    animation: bounceD;
+  }
+}
+
+@keyframes bounceD {
   0% {
     margin-top: 0.5rem;
   }
   100% {
-    margin-top: 10rem;
+    margin-top: 0rem;
+    animation: bounceT;
   }
-} */
+}
