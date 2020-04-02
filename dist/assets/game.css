@@ -1,0 +1,126 @@
+* {
+  box-sizing: borde-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fffff8;
+  color: #707070;
+  font-family: "Baloo Da 2", cursive;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #707070;
+}
+
+.main {
+  width: 100%;
+  text-align: center;
+}
+
+.main h1 {
+  font-size: 75px;
+  font-weight: normal;
+}
+
+.players-score {
+  font-size: 75px;
+  position: relative;
+}
+
+.players-score .playerOne-score {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+.colon {
+  position: absolute;
+  margin: 3rem auto 0 -0.5rem;
+}
+
+.players-score .playerTwo-score {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+}
+
+.main .game {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 15rem auto 0 auto;
+}
+
+.main .game img {
+  width: 150px;
+  margin: auto -3rem;
+  border: 2.5px solid #707070;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.congratulations-section {
+  /* display: none; */
+  margin-top: 3.5rem;
+  line-height: 3.5rem;
+}
+
+.congratulations-section h3 {
+  font-size: 50px;
+  font-weight: normal;
+}
+
+.congratulations-section h2 {
+  font-size: 75px;
+  font-weight: normal;
+}
+
+.buttons {
+  position: absolute;
+  font-size: 35px;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+}
+
+.buttons a {
+  border: 2px solid #707070;
+  border-radius: 48px;
+  padding: 0.75rem 1.75rem;
+  background-color: #fff;
+}
+
+.buttons a:hover {
+  border-color: rgba(112, 112, 112, 0.8);
+  background-color: rgba(112, 112, 112, 0.1);
+  box-shadow: 5px 5px 20px #707070, -5px -5px 20px #707070;
+}
+
+.main .footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  text-align: right;
+  position: absolute;
+  bottom: 0%;
+}
+.main .footer p,
+.main .footer img {
+  display: inline-block;
+}
+
+.main .footer p {
+  width: 100%;
+  padding: 0;
+  margin: auto 0;
+  font-size: 20px;
+}
+
+.main .footer img {
+  width: 50px;
+  height: 50px;
+}
