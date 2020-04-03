@@ -1,0 +1,15 @@
+.tooltip-content-main {
+  display: none;
+  width: 60%;
+  margin: auto;
+  line-height: 2rem;
+  color: #f0810f;
+}
+
+.tooltip-content-main p {
+  font-size: 1.88rem;
+}
+
+.tooltip-content-main.show {
+  display: block;
+}

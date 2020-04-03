@@ -1,0 +1,25 @@
+.main .tooltip-content-choice {
+  display: none;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  text-align: center;
+  width: 483px;
+  height: 74px;
+  font-size: 20px;
+  border-radius: 38px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  background-color: #69a996;
+}
+
+.main .tooltip-content-choice.show {
+  display: block;
+}
+
+.main .tooltip-content-choice p {
+  line-height: 1rem;
+  padding: 0;
+  width: 400px;
+  margin: 1rem auto;
+}
