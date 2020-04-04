@@ -33,9 +33,16 @@ a {
   color: #707070;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 /* tooltip content */
 
 .main .tooltip-title {
+  align-self: flex-end;
   text-align: right;
   font-size: 40px;
   padding: 0;
@@ -76,7 +83,7 @@ a {
 
 .middle-btn a:nth-child(3) {
   display: block;
-  width: 16%;
+  width: 40%;
   margin: 2rem auto;
 }
 

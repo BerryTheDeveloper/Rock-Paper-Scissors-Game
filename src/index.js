@@ -23,7 +23,9 @@ if (tooltipChoice) {
 }
 
 // show congratulations
-const images = document.querySelector(".game");
+const images = document.querySelectorAll(".game img");
 const congratulations = document.querySelector(".congratulations-section");
-const playerMove = new Game(images, congratulations);
-playerMove.init();
+if (images || congratulations) {
+  const playerMove = new Game(images, congratulations);
+  playerMove.init();
+}
