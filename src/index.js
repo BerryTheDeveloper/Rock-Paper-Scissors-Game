@@ -23,9 +23,10 @@ if (tooltipChoice) {
 }
 
 // show congratulations
+const playersScore = document.querySelector(".players-score");
 const images = document.querySelectorAll(".game img");
 const congratulations = document.querySelector(".congratulations-section");
-if (images || congratulations) {
-  const playerMove = new Game(images, congratulations);
+if (images) {
+  const playerMove = new Game(playersScore, images, congratulations);
   playerMove.init();
 }
