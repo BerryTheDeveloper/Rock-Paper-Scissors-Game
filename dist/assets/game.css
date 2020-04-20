@@ -65,9 +65,12 @@ a {
 }
 
 .congratulations-section {
-  display: none;
   margin-top: 3.5rem;
   line-height: 3.5rem;
+}
+
+.congratulations-section.d-none {
+  display: none;
 }
 
 .congratulations-section h3 {

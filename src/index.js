@@ -26,7 +26,13 @@ if (tooltipChoice) {
 const playersScore = document.querySelector(".players-score");
 const images = document.querySelectorAll(".game img");
 const congratulations = document.querySelector(".congratulations-section");
+const buttonKick = document.getElementById("kick");
 if (images) {
-  const playerMove = new Game(playersScore, images, congratulations);
+  const playerMove = new Game(
+    playersScore,
+    images,
+    congratulations,
+    buttonKick
+  );
   playerMove.init();
 }
