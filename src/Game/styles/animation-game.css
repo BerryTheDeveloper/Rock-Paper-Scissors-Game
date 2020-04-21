@@ -1,6 +1,6 @@
 /* clicekd img */
 .main .game img.rotate {
-  animation: rotate 0.5s linear;
+  animation: rotate 0.3s linear;
 }
 
 @keyframes rotate {

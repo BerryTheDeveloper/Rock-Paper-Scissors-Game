@@ -7,15 +7,26 @@ class Game {
     this.comp = this.playersScore.querySelector(".playerTwo-score span");
     this.img = img;
     this.congrats = congrats;
+    this.congratsH3 = this.congrats.querySelector("h3");
+    this.congratsH2 = this.congrats.querySelector("h2");
     this.buttonKick = buttonKick;
   }
   init() {
-    this.img.forEach((item) => {
-      this.rotate(item);
+    this.img.forEach((element) => {
+      this.rotate(element);
     });
   }
-  congratulation() {
-    this.congrats.classList.remove("d-none");
+  congratulation(scoreP) {
+    if (scoreP) {
+      this.congratsH3.innerHTML = "Congratulations :)";
+      this.congratsH2.innerHTML = "You Won!";
+      this.congrats.classList.remove("d-none");
+    } else {
+      this.congratsH3.innerHTML = "Unfortunately :(";
+      this.congratsH2.innerHTML = "Computer Won!";
+      this.congrats.classList.remove("d-none");
+      console.log("Computer Won!");
+    }
     this.reset();
   }
   computerMove() {
@@ -30,50 +41,45 @@ class Game {
       this.comp.innerHTML = Number(this.comp.textContent) + 1;
     }
   }
+  draw() {}
   logic(element) {
     const compRandChoice = this.computerMove();
     const choosed = element.alt;
     let count = true;
-    const check =
-      (Number(this.player.textContent) || Number(this.comp.textContent)) >= 3
-        ? "up"
-        : "down";
 
-    if (check === "down") {
-      if (choosed === compRandChoice) {
-        console.log("It's a Draw!");
-      } else if (choosed !== compRandChoice) {
-        if (choosed === "Rock" && compRandChoice === "Scissors") {
-          count = true;
-        } else if (choosed === "Rock" && compRandChoice === "Papper") {
-          count = false;
-          // this.counter(count);
-        } else if (choosed === "Scissors" && compRandChoice === "Papper") {
-          count = true;
-          // this.counter(count);
-        } else if (choosed === "Scissors" && compRandChoice === "Rock") {
-          count = false;
-          // this.counter(count);
-        } else if (choosed === "Papper" && compRandChoice === "Rock") {
-          count = true;
-          // this.counter(count);
-        } else if (choosed === "Papper" && compRandChoice === "Scissors") {
-          count = false;
-          // this.counter(count);
-        }
-        this.counter(count);
+    if (choosed === compRandChoice) {
+      this.draw();
+    } else if (choosed !== compRandChoice) {
+      if (choosed === "Rock" && compRandChoice === "Scissors") {
+        count = true;
+      } else if (choosed === "Rock" && compRandChoice === "Papper") {
+        count = false;
+      } else if (choosed === "Scissors" && compRandChoice === "Papper") {
+        count = true;
+      } else if (choosed === "Scissors" && compRandChoice === "Rock") {
+        count = false;
+      } else if (choosed === "Papper" && compRandChoice === "Rock") {
+        count = true;
+      } else if (choosed === "Papper" && compRandChoice === "Scissors") {
+        count = false;
       }
-    } else {
-      this.congratulation();
+      this.counter(count);
     }
   }
   rotate(eachImg) {
     eachImg.addEventListener("click", (event) => {
-      event.target.classList.add("rotate");
-      setTimeout(() => {
-        event.target.classList.remove("rotate");
-      }, 1500);
-      this.logic(event.target);
+      const scoreP = Number(this.player.textContent) === 5 ? true : false;
+      const scoreC = Number(this.comp.textContent) === 5 ? true : false;
+
+      if ((scoreP || scoreC) === false) {
+        event.target.classList.add("rotate");
+        setTimeout(() => {
+          event.target.classList.remove("rotate");
+        }, 1500);
+        this.logic(event.target);
+      } else {
+        this.congratulation(scoreP);
+      }
     });
   }
   reset() {
