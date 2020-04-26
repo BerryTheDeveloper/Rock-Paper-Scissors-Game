@@ -41,7 +41,14 @@ class Game {
       this.comp.innerHTML = Number(this.comp.textContent) + 1;
     }
   }
-  draw() {}
+  draw() {
+    this.congratsH3.innerHTML = "Draw!";
+    this.congratsH2.innerHTML = "";
+    this.congrats.classList.remove("d-none");
+    setTimeout(() => {
+      this.congrats.classList.add("d-none");
+    }, 500);
+  }
   logic(element) {
     const compRandChoice = this.computerMove();
     const choosed = element.alt;
@@ -75,8 +82,9 @@ class Game {
         event.target.classList.add("rotate");
         setTimeout(() => {
           event.target.classList.remove("rotate");
-        }, 1500);
+        }, 250);
         this.logic(event.target);
+        this.reset();
       } else {
         this.congratulation(scoreP);
       }
