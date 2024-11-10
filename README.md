@@ -12,6 +12,3 @@ It's simple, playlable and a little fun like others Rock, Papper, Scissors games
 3. Increase JavaScript skills
 4. Babel
 5. npm scripts
-
-<br>
-<p align="center"><a href="https://simplyrockpapperscissors.netlify.app/">Rock, Papper, Scissors Game - Demo</a></p>
